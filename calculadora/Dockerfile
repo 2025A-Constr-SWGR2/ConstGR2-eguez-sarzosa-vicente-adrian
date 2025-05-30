@@ -2,7 +2,7 @@
 FROM node:22.14
  
 # Establecer el directorio de trabajo dentro del contenedor
-WORKDIR /usr/src/app
+        # WORKDIR /usr/src/app//
  
 # Copiar los archivos de la aplicación al contenedor
 COPY package*.json ./
