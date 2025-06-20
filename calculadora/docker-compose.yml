@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: . # Contexto de nuestro Dockerfile
+      dockerfile: Dockerfile # Nombre de nuestro Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db # Espera a que el servicio llamado "db" se levante primero
+    environment:
+      DB_HOST: ADR_COMPOSE_HOST
+      DB_USER: ADR_COMP_USER
+      DB_PASSWORD: ADR_COMP_PASS
+      DB_NAME: ADR_COMP_PASS
+  db:
+    image: postgres:latest
+    container_name: my_postgres_db
+    environment:
+      POSTGRES_USER: ADR_COMP_USER
+      POSTGRES_PASSWORD: ADR_COMP_PASS
+      POSTGRES_DB: ADR_COMP_PASS
+    ports:
+      - "5432:5432" # Exponemos el puerto de postgresql en nuestra maquina HOST
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persistimos los datos
+volumes:
+  postgres_data:
+ 
