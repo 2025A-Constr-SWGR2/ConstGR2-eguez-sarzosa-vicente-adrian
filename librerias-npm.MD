@@ -17,12 +17,12 @@ Cada uno de los estudiantes va a seleccionar una operacion:
 
 Puede ser 2 o hasta 4 operaciones en el grupo.
 
-Cada uno de los estudiantes va a crear una `carpeta` en su repositorio con las iniciales de su nombre + este prefijo `2025a-swgr1-` + operacion. Al final el ejemplo completo seria de la persona Vicente Adrian Eguez Sarzosa:
+Cada uno de los estudiantes va a crear una `carpeta` en su repositorio con las iniciales de su nombre + este prefijo `2025a-swgr2-` + operacion. Al final el ejemplo completo seria de la persona Vicente Adrian Eguez Sarzosa:
 
--  Para la suma: `2025a-swgr1-vaes-suma`
--  Para la resta: `2025a-swgr1-vaes-resta`
--  Para la multiplicacion: `2025a-swgr1-vaes-multiplicacion`
--  Para la division: `2025a-swgr1-vaes-division`
+-  Para la suma: `2025a-swgr2-vaes-suma`
+-  Para la resta: `2025a-swgr2-vaes-resta`
+-  Para la multiplicacion: `2025a-swgr2-vaes-multiplicacion`
+-  Para la division: `2025a-swgr2-vaes-division`
 
 ## Login a npm
 Vamos a logearnos en la terminal con el comando:
@@ -35,7 +35,7 @@ Se abre el navegador presionando `enter` y luego ya estamos logeados en nuestra 
 
 ## Crear proyecto npm
 
-`Dentro` de la carpeta (por ejemplo, para la suma `2025a-swgr1-vaes-suma`) vamos a crear un nuevo proyecto de `npm` con el siguiente comando:
+`Dentro` de la carpeta (por ejemplo, para la suma `2025a-swgr2-vaes-suma`) vamos a crear un nuevo proyecto de `npm` con el siguiente comando:
 
 ```bash
 npm init
@@ -44,7 +44,7 @@ npm init
 Nos va a solicitar algunas respuestas en la consola, serian estas (depende del modulo que esten haciendo, en este caso es `2025a-swgr1-vaes-suma`):
 
 ```
-package name: (2025a-swgr1-vaes-suma)
+package name: (2025a-swgr2-vaes-suma)
 version: (1.0.0)
 description: 
 entry point: (index.js)
@@ -60,7 +60,7 @@ Al finalizar esto, vamos a ver que se creo un nuevo archivo `package.json` con e
 
 ```json
 {
-  "name": "2025a-swgr1-vaes-suma",
+  "name": "2025a-swgr2-vaes-suma",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -135,7 +135,7 @@ El contenido del archivo con todo por defecto en mi caso es:
 Ahora vamos a instalar el paquete con el siguiente comando (este comando depende del nombre del paquete que creamos anteriormente):
 
 ```bash
-npm link 2025a-swgr1-vaes-suma
+npm link 2025a-swgr2-vaes-suma
 ```
 
 Aqui usamos otra vez el comando npm link con el nombre de nuestra libreria, esto va a instalarla localmente y podremos usarla.
@@ -145,14 +145,14 @@ Aqui usamos otra vez el comando npm link con el nombre de nuestra libreria, esto
 Para usar el modulo usamos un nuevo archivo `index.js` con el siguiente contenido:
 
 ```js
-const paqueteSuma = require('2025a-swgr1-vaes-suma');
+const paqueteSuma = require('2025a-swgr2-vaes-suma');
 
 const respuesta = paqueteSuma.suma(1, 2);
 
 console.log('La respuesta es: ', respuesta);
 ```
 
-Notemos que estamos importando el modulo con el nombre que pusimos `2025a-swgr1-vaes-suma`. 
+Notemos que estamos importando el modulo con el nombre que pusimos `2025a-swgr2-vaes-suma`. 
 
 Ahora podemos ejecutar el archivo con este comando:
 
